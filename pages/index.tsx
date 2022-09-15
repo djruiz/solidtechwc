@@ -15,7 +15,7 @@ export default (props: Props) => {
   )
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const url = process.env.NEXT_PUBLIC_STRAPI_URL + "/api/headline"
   type ResponseBody = { data: { attributes: Props } }
   const headlineRes: AxiosResponse<ResponseBody> = await Axios.get(url)
