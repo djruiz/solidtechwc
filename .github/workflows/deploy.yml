@@ -1,4 +1,4 @@
-name: Deploy to Github Pages
+name: Deploy Nextjs to Github Pages
 
 on:
   push:
@@ -23,9 +23,6 @@ jobs:
       - name: Build
         run: |
           npm i --legacy-peer-deps
-          cd admin
-          npm i --legacy-peer-deps
-          cd ..
           npm run build
           npm run export
 
