@@ -1,29 +1,10 @@
 import React from "react"
-import Axios, { AxiosResponse } from "axios"
 
-interface Props {
-  title: string,
-  description: string
-}
-
-export default (props: Props) => {
+export default () => {
   return (
     <div>
-      <h1>{props.title}</h1>
-      <p>{props.description}</p>
+      <h1>Solid Tech Wrestling Club</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   )
-}
-
-export const getStaticProps = async () => {
-  const url = process.env.NEXT_PUBLIC_STRAPI_URL + "/api/headline"
-  type ResponseBody = { data: { attributes: Props } }
-  const headlineRes: AxiosResponse<ResponseBody> = await Axios.get(url)
-
-  return {
-    props: {
-      title: headlineRes.data.data.attributes.title,
-      description: headlineRes.data.data.attributes.description
-    }
-  }
 }
