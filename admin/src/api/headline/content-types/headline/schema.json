@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "headlines",
+  "info": {
+    "singularName": "headline",
+    "pluralName": "headlines",
+    "displayName": "Site Headline",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
