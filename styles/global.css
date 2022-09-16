@@ -2,15 +2,26 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: #cf3838;
 }
 
-* {
-  box-sizing: border-box;
+a:hover {
+  color: #ff0000;
+}
+
+.marker {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.inset-shadow {
+  -moz-box-shadow: inset 0 0 20px #000000;
+  -webkit-box-shadow: inset 0 0 20px #000000;
+  box-shadow: inset 0 0 20px #000000;
 }
