@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Londrina+Solid:wght@100&family=Open+Sans:wght@800&display=swap');
+
+.londrina {
+  font-family: 'Londrina Solid', cursive;
+}
+
+.open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.exo {
+  font-family: 'Exo 2', sans-serif;
+}
+
 html,
 body {
   padding: 0;
@@ -12,9 +26,7 @@ a:hover {
   color: #ff0000;
 }
 
-.marker {
-  font-family: 'Permanent Marker', cursive;
-}
+
 
 .underline {
   text-decoration: underline;
@@ -29,5 +41,8 @@ a:hover {
 
 .mh-100 {
   min-height: 100vh;
-  
+}
+
+.text-shadow {
+  text-shadow: 0 0 4px #00000070
 }
