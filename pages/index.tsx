@@ -1,12 +1,20 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Lightning from "../img/lightning.png";
 import Tossed from "../img/tossed.jpg";
+import Physical from "../img/physical.png";
 
 interface Props {
   children: React.ReactNode;
   color: string;
   flip?: boolean;
+}
+
+interface FeatureProps {
+  img: StaticImageData;
+  heading: string;
+  subHeading: string;
+  description: string;
 }
 
 const Header = (props: Props) => {
@@ -21,6 +29,19 @@ const Header = (props: Props) => {
       <div
         style={{ width: "100%", height: "3px", backgroundColor: props.color }}
       ></div>
+    </div>
+  );
+};
+
+const Feature = (props: FeatureProps) => {
+  return (
+    <div className="col-sm-12">
+      <div className="image-background">
+        <Image src={props.img} layout="responsive" />
+        <h1>{props.heading}</h1>
+        <h2>{props.subHeading}</h2>
+        <p>{props.description}</p>
+      </div>
     </div>
   );
 };
@@ -51,6 +72,16 @@ export default () => {
             Stay. <span className="text-primary">Solid.</span>
           </h2>
         </Header>
+        <div className="features text-primary">
+          <div className="row">
+            <Feature
+              heading="Mental Fortitude"
+              subHeading="Lorem"
+              description="LOremLoremLoREMLoremLoReM"
+              img={Physical}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
