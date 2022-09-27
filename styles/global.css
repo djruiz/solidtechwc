@@ -46,3 +46,27 @@ a:hover {
 .text-shadow {
   text-shadow: 0 0 4px #00000070
 }
+
+.feature-border {
+  border-left:  solid 3px #ff0505;
+  border-right: solid 3px white;
+}
+
+.feature-background {
+  padding: 25px 0;
+}
+
+.feature-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {  
+  .feature-text {
+    text-align: left;
+    margin-top: 0;
+  }
+  .feature-background {
+    padding: 10px 0;
+  }
+} 

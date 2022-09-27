@@ -2,7 +2,9 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Lightning from "../img/lightning.png";
 import Tossed from "../img/tossed.jpg";
+import Mental from "../img/mental.png";
 import Physical from "../img/physical.png";
+import Education from "../img/education.png";
 
 interface Props {
   children: React.ReactNode;
@@ -35,12 +37,38 @@ const Header = (props: Props) => {
 
 const Feature = (props: FeatureProps) => {
   return (
-    <div className="col-sm-12">
-      <div className="image-background">
-        <Image src={props.img} layout="responsive" />
-        <h1>{props.heading}</h1>
-        <h2>{props.subHeading}</h2>
-        <p>{props.description}</p>
+    <div className="feature-border">
+      <div
+        className="row mx-2 feature-background"
+        style={{ backgroundColor: "gray" }}
+      >
+        <div className="col-sm-12 col-md-3 d-flex align-items-center justify-content-center">
+          <div
+            className="image-background d-flex align-items-center justify-content-center"
+            style={{
+              backgroundColor: "white",
+              borderRadius: "100%",
+              height: "125px",
+              width: "125px",
+            }}
+          >
+            <Image src={props.img} width={100} height={100} />
+          </div>
+        </div>
+        <div className="col-sm-12 col-md-9 feature-text">
+          <h1 className="open-sans m-0" style={{ color: "white" }}>
+            {props.heading}
+          </h1>
+          <h2 className="exo m-0" style={{ color: "#ff0505" }}>
+            {props.subHeading}
+          </h2>
+          <p
+            className="londrina m-0 "
+            style={{ color: "black", fontSize: "20px", paddingLeft: "2px" }}
+          >
+            {props.description}
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -72,13 +100,29 @@ export default () => {
             Stay. <span className="text-primary">Solid.</span>
           </h2>
         </Header>
-        <div className="features text-primary">
-          <div className="row">
+        <div className="features text-primary mt-4">
+          <div className="m-0 py-4">
             <Feature
               heading="Mental Fortitude"
               subHeading="Lorem"
               description="LOremLoremLoREMLoremLoReM"
-              img={Physical}
+              img={Mental}
+            />
+
+            <div>
+              <Feature
+                heading="Physical Strength"
+                subHeading="Lorem"
+                description="LOremLoremLoREMLoremLoReM"
+                img={Physical}
+              />
+            </div>
+
+            <Feature
+              heading="Education"
+              subHeading="Lorem"
+              description="LOremLoremLoREMLoremLoReM"
+              img={Education}
             />
           </div>
         </div>
