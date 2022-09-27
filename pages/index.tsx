@@ -37,7 +37,7 @@ const Header = (props: Props) => {
 
 const Feature = (props: FeatureProps) => {
   return (
-    <div className="feature-border">
+    <div className="feature-border my-4">
       <div
         className="row mx-2 feature-background"
         style={{ backgroundColor: "gray" }}
@@ -109,14 +109,12 @@ export default () => {
               img={Mental}
             />
 
-            <div>
-              <Feature
-                heading="Physical Strength"
-                subHeading="Lorem"
-                description="LOremLoremLoREMLoremLoReM"
-                img={Physical}
-              />
-            </div>
+            <Feature
+              heading="Physical Strength"
+              subHeading="Lorem"
+              description="LOremLoremLoREMLoremLoReM"
+              img={Physical}
+            />
 
             <Feature
               heading="Education"
