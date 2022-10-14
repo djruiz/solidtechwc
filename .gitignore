@@ -28,3 +28,6 @@ yarn-error.log*
 # Github Pages
 gh-pages
 gh-pages.pub
+
+# Digital Ocean Root Pwd
+do
