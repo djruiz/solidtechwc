@@ -5,6 +5,7 @@ import Tossed from "../img/tossed.jpg";
 import Mental from "../img/mental.png";
 import Physical from "../img/physical.png";
 import Education from "../img/education.png";
+import { FacebookEmbed, InstagramEmbed } from "react-social-media-embed";
 
 interface Props {
   children: React.ReactNode;
@@ -77,6 +78,16 @@ const Feature = (props: FeatureProps) => {
 export default () => {
   return (
     <div className="bg-dark mh-100" style={{ paddingTop: "50px" }}>
+      <FacebookEmbed
+        url="https://www.facebook.com/SolidTechWrestlingClub/posts/"
+        height={400}
+        width={400}
+      />
+      <InstagramEmbed
+        url="https://www.instagram.com/solidtechwrestlingclub/?hl=en"
+        height={400}
+        width={400}
+      />
       <div className="bg-dark container" style={{ maxWidth: "750px" }}>
         <Header color="#fff">
           <h1 className="mr-4 open-sans">Solid Tech</h1>
