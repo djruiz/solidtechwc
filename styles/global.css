@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Londrina+Solid:wght@100&family=Open+Sans:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Londrina+Solid:wght@100&family=Open+Sans:wght@800&display=swap");
 
 .londrina {
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
 }
 
 .open-sans {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .exo {
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
 }
 
 html,
@@ -53,11 +53,11 @@ a:hover {
 }
 
 .text-shadow {
-  text-shadow: 0 0 4px #00000070
+  text-shadow: 0 0 4px #00000070;
 }
 
 .feature-border {
-  border-left:  solid 3px #ff0505;
+  border-left: solid 3px #ff0505;
   border-right: solid 3px white;
 }
 
@@ -74,7 +74,26 @@ a:hover {
   background-color: #222;
 }
 
-@media (min-width: 992px) {  
+.gallery-img {
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.gallery-img-container span {
+  overflow: visible !important;
+}
+
+.gallery-img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-container {
+  margin-top: 120px;
+}
+
+@media (min-width: 992px) {
   .feature-text {
     text-align: left;
     margin-top: 0;
@@ -82,4 +101,8 @@ a:hover {
   .feature-background {
     padding: 10px 0;
   }
-} 
+
+  .gallery-container {
+    margin-top: 40px;
+  }
+}

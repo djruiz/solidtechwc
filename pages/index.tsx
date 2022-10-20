@@ -1,27 +1,38 @@
-import React from "react";
-import Image, { StaticImageData } from "next/image";
-import Lightning from "../img/lightning.png";
-import Tossed from "../img/tossed.jpg";
-import Mental from "../img/mental.png";
-import Physical from "../img/physical.png";
-import Education from "../img/education.png";
-import useScreenSize from "use-screen-size";
-import { FacebookEmbed, InstagramEmbed } from "react-social-media-embed";
+import React from "react"
+import Image, { StaticImageData } from "next/image"
+import Lightning from "../img/lightning.png"
+import Tossed from "../img/tossed.jpg"
+import Mental from "../img/mental.png"
+import Physical from "../img/physical.png"
+import Education from "../img/education.png"
+import InstagramLogo from "../img/ig-logo.png"
+import useScreenSize from "use-screen-size"
+import { InstagramEmbed } from "react-social-media-embed"
+
+import Gallery1 from "../img/gallery/1.jpg"
+import Gallery2 from "../img/gallery/2.jpg"
+import Gallery3 from "../img/gallery/3.jpg"
+import Gallery4 from "../img/gallery/4.png"
+import Gallery5 from "../img/gallery/5.png"
+import Gallery6 from "../img/gallery/6.png"
+import Gallery7 from "../img/gallery/7.jpg"
+import Gallery8 from "../img/gallery/8.jpg"
+import Gallery9 from "../img/gallery/9.jpg"
 
 interface HeaderProps {
-  children: React.ReactNode;
-  color: string;
-  flip?: boolean;
-  className?: string;
-  style?: React.CSSProperties;
-  pre?: React.ReactNode;
+  children: React.ReactNode
+  color: string
+  flip?: boolean
+  className?: string
+  style?: React.CSSProperties
+  pre?: React.ReactNode
 }
 
 interface FeatureProps {
-  img: StaticImageData;
-  heading: string;
-  subHeading: string;
-  description: string;
+  img: StaticImageData
+  heading: string
+  subHeading: string
+  description: string
 }
 
 const Header = (props: HeaderProps) => {
@@ -46,8 +57,8 @@ const Header = (props: HeaderProps) => {
       ></div>
       {props.pre}
     </div>
-  );
-};
+  )
+}
 
 const Feature = (props: FeatureProps) => {
   return (
@@ -83,16 +94,16 @@ const Feature = (props: FeatureProps) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default () => {
-  const size = useScreenSize();
-  const sm = size.width <= 992;
-  const xs = size.width <= 576;
+  const size = useScreenSize()
+  const sm = size.width <= 992
+  const xs = size.width <= 576
 
   return (
-    <div className="mh-100 bg-darkish">
+    <div className="mh-100 bg-darkish" style={{ paddingBottom: 50 }}>
       <div>
         <div className="position-relative shadow-max" style={{ zIndex: 2 }}>
           <Header color="#fff" className="pt-4">
@@ -221,12 +232,69 @@ export default () => {
             Stay. <span className="text-primary">Solid.</span>
           </h2>
         </Header>
-        <InstagramEmbed
-          url="https://www.instagram.com/solidtechwrestlingclub/?hl=en"
-          height={400}
-          width={400}
-        />
+        <div className="mx-4 gallery-container">
+          <h1 style={{ color: "#555" }} className="text-center mb-4 pb-4">GALLERY</h1>
+          <div className="row mx-4">
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+              <Image objectFit="cover" width={400} height={250} src={Gallery1} className="gallery-img shadow" />
+            </div>
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+              <Image objectFit="cover" width={400} height={250} src={Gallery2} className="gallery-img shadow" />
+            </div>
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+              <Image objectFit="cover" width={400} height={250} src={Gallery3} className="gallery-img shadow" />
+            </div>
+          </div>
+          <div className="row mx-4">
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+              <Image objectFit="cover" width={400} height={250} src={Gallery4} className="gallery-img shadow" />
+            </div>
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+              <Image objectFit="cover" width={400} height={250} src={Gallery5} className="gallery-img shadow" />
+            </div>
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+              <Image objectFit="cover" width={400} height={250} src={Gallery6} className="gallery-img shadow" />
+            </div>
+          </div>
+          <div className="row mx-4">
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+              <Image width={400} height={250} src={Gallery7} className="gallery-img shadow" />
+            </div>
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+              <Image width={400} height={250} src={Gallery8} className="gallery-img shadow" />
+            </div>
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+              <Image width={400} height={250} src={Gallery9} className="gallery-img shadow" />
+            </div>
+          </div>
+        </div>
+        <div className="container py-4" style={{ marginTop: "50px" }}>
+          <div className="row flex-row-reverse">
+            <div className="col col-12 col-md-6 mb-4 pb-4">
+              <div>
+                <InstagramEmbed
+                  url="https://www.instagram.com/solidtechwrestlingclub/?hl=en"
+                  height={"100%"}
+                  width={"100%"}
+                />
+              </div>
+            </div>
+            <div className="col col-12 col-md-6 d-flex flex-column align-items-center" style={{ height: "100%" }}>
+              <div>
+                <h2 className="text-light text-center">Follow us on Instagram</h2>
+              </div>
+              <div className="w-100 d-flex justify-content-center mt-4 pt-4">
+                <div className="drop" style={{ maxWidth: 150 }}>
+                  <Image src={InstagramLogo} />
+                </div>
+              </div>
+              <a target={"_blank"} href="https://www.instagram.com/solidtechwrestlingclub/?utm_source=ig_embed">
+                <div style={{ maxWidth: 250, marginTop: 50 }} className="btn btn-primary btn-lg exo">FOLLOW SOLID TECH</div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  );
-};
+  )
+}
