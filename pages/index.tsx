@@ -182,12 +182,11 @@ export default () => {
                   }}
                 >
                   Solid Tech Wrestling Club prepares its athletes with the
-                  skills, knowledge, and experience it takes to become a
-                  champion. Get started with your wrestling journey by clicking
-                  the button below.
+                  skills, knowledge, and experience it takes to win. Join us
+                  today and become a champion.
                 </p>
 
-                <a href="">
+                <a href="mailto:solidtechwrestlingclub@gmail.com?subject=Joining Solid Tech WC&body=Hi Coach, I'm interested in joining Solid Tech Wresting Club.">
                   <button
                     className="position-relative btn btn-primary btn-lg w-100 shadow-med exo"
                     style={{ fontSize: 24 }}
