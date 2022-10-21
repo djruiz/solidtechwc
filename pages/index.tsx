@@ -1,36 +1,35 @@
-import React from "react";
-import Image, { StaticImageData } from "next/image";
-import Lightning from "../img/lightning.png";
-import Tossed from "../img/tossed.jpg";
-import Mental from "../img/mental.png";
-import Physical from "../img/physical.png";
-import Education from "../img/education.png";
-import InstagramLogo from "../img/ig-logo.png";
-import useScreenSize from "use-screen-size";
-import { InstagramEmbed } from "react-social-media-embed";
+import React, { useEffect, useState } from "react"
+import Image, { StaticImageData } from "next/image"
+import Lightning from "../img/lightning.png"
+import Tossed from "../img/tossed.jpg"
+import Mental from "../img/mental.png"
+import Physical from "../img/physical.png"
+import Education from "../img/education.png"
+import InstagramLogo from "../img/ig-logo.png"
+import { InstagramEmbed } from "react-social-media-embed"
 
-import Gallery1 from "../img/gallery/1.jpg";
-import Gallery2 from "../img/gallery/2.jpg";
-import Gallery3 from "../img/gallery/3.jpg";
-import Gallery4 from "../img/gallery/4.png";
-import Gallery5 from "../img/gallery/5.png";
-import Gallery6 from "../img/gallery/6.png";
-import Gallery7 from "../img/gallery/7.jpg";
-import Gallery8 from "../img/gallery/8.jpg";
-import Gallery9 from "../img/gallery/9.jpg";
+import Gallery1 from "../img/gallery/1.jpg"
+import Gallery2 from "../img/gallery/2.jpg"
+import Gallery3 from "../img/gallery/3.jpg"
+import Gallery4 from "../img/gallery/4.png"
+import Gallery5 from "../img/gallery/5.png"
+import Gallery6 from "../img/gallery/6.png"
+import Gallery7 from "../img/gallery/7.jpg"
+import Gallery8 from "../img/gallery/8.jpg"
+import Gallery9 from "../img/gallery/9.jpg"
 
 interface HeaderProps {
-  children: React.ReactNode;
-  color: string;
-  flip?: boolean;
-  className?: string;
-  style?: React.CSSProperties;
-  pre?: React.ReactNode;
+  children: React.ReactNode
+  color: string
+  flip?: boolean
+  className?: string
+  style?: React.CSSProperties
+  pre?: React.ReactNode
 }
 
 interface FeatureProps {
-  img: StaticImageData;
-  heading: string;
+  img: StaticImageData
+  heading: string
 }
 
 const Header = (props: HeaderProps) => {
@@ -55,8 +54,8 @@ const Header = (props: HeaderProps) => {
       ></div>
       {props.pre}
     </div>
-  );
-};
+  )
+}
 
 const Feature = (props: FeatureProps) => {
   return (
@@ -86,13 +85,34 @@ const Feature = (props: FeatureProps) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
+
+function useScreenSize() {
+  let [sm, setSm] = useState(false)
+  let [xs, setXs] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth <= 992) {
+        setSm(true)
+      } else {
+        setSm(false)
+      }
+
+      if (window.innerWidth <= 576) {
+        setXs(true)
+      } else {
+        setXs(false)
+      }
+    })
+  }, [])
+
+  return { sm, xs }
+}
 
 export default () => {
-  const size = useScreenSize();
-  const sm = size.width <= 992;
-  const xs = size.width <= 576;
+  const { sm, xs } = useScreenSize()
 
   return (
     <div className="mh-100 bg-darkish" style={{ paddingBottom: 50 }}>
@@ -354,5 +374,5 @@ export default () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
