@@ -1,38 +1,36 @@
-import React from "react"
-import Image, { StaticImageData } from "next/image"
-import Lightning from "../img/lightning.png"
-import Tossed from "../img/tossed.jpg"
-import Mental from "../img/mental.png"
-import Physical from "../img/physical.png"
-import Education from "../img/education.png"
-import InstagramLogo from "../img/ig-logo.png"
-import useScreenSize from "use-screen-size"
-import { InstagramEmbed } from "react-social-media-embed"
+import React from "react";
+import Image, { StaticImageData } from "next/image";
+import Lightning from "../img/lightning.png";
+import Tossed from "../img/tossed.jpg";
+import Mental from "../img/mental.png";
+import Physical from "../img/physical.png";
+import Education from "../img/education.png";
+import InstagramLogo from "../img/ig-logo.png";
+import useScreenSize from "use-screen-size";
+import { InstagramEmbed } from "react-social-media-embed";
 
-import Gallery1 from "../img/gallery/1.jpg"
-import Gallery2 from "../img/gallery/2.jpg"
-import Gallery3 from "../img/gallery/3.jpg"
-import Gallery4 from "../img/gallery/4.png"
-import Gallery5 from "../img/gallery/5.png"
-import Gallery6 from "../img/gallery/6.png"
-import Gallery7 from "../img/gallery/7.jpg"
-import Gallery8 from "../img/gallery/8.jpg"
-import Gallery9 from "../img/gallery/9.jpg"
+import Gallery1 from "../img/gallery/1.jpg";
+import Gallery2 from "../img/gallery/2.jpg";
+import Gallery3 from "../img/gallery/3.jpg";
+import Gallery4 from "../img/gallery/4.png";
+import Gallery5 from "../img/gallery/5.png";
+import Gallery6 from "../img/gallery/6.png";
+import Gallery7 from "../img/gallery/7.jpg";
+import Gallery8 from "../img/gallery/8.jpg";
+import Gallery9 from "../img/gallery/9.jpg";
 
 interface HeaderProps {
-  children: React.ReactNode
-  color: string
-  flip?: boolean
-  className?: string
-  style?: React.CSSProperties
-  pre?: React.ReactNode
+  children: React.ReactNode;
+  color: string;
+  flip?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+  pre?: React.ReactNode;
 }
 
 interface FeatureProps {
-  img: StaticImageData
-  heading: string
-  subHeading: string
-  description: string
+  img: StaticImageData;
+  heading: string;
 }
 
 const Header = (props: HeaderProps) => {
@@ -57,14 +55,14 @@ const Header = (props: HeaderProps) => {
       ></div>
       {props.pre}
     </div>
-  )
-}
+  );
+};
 
 const Feature = (props: FeatureProps) => {
   return (
     <div className="my-3 position-relative">
       <div
-        className="row m-0 feature-background rounded shadow border border-primary p-3"
+        className="row m-0 feature-background rounded shadow border border-primary p-3 align-items-center"
         style={{ backgroundColor: "#000000d0" }}
       >
         <div className="col-sm-12 col-lg-3 d-flex align-items-center justify-content-center">
@@ -79,28 +77,22 @@ const Feature = (props: FeatureProps) => {
           </div>
         </div>
         <div className="col-sm-12 col-lg-9 feature-text">
-          <h2
+          <h1
             className="open-sans m-0"
-            style={{ color: "white", fontSize: 24 }}
+            style={{ color: "white", fontSize: 32 }}
           >
             {props.heading}
-          </h2>
-          <p
-            className="londrina m-0 text-primary"
-            style={{ fontSize: "20px", paddingLeft: "2px" }}
-          >
-            {props.description}
-          </p>
+          </h1>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default () => {
-  const size = useScreenSize()
-  const sm = size.width <= 992
-  const xs = size.width <= 576
+  const size = useScreenSize();
+  const sm = size.width <= 992;
+  const xs = size.width <= 576;
 
   return (
     <div className="mh-100 bg-darkish" style={{ paddingBottom: 50 }}>
@@ -173,27 +165,28 @@ export default () => {
                 marginTop: sm ? 0 : "5vh",
               }}
             >
-              <div className="m-4">
-                <Feature
-                  heading="Mental Fortitude"
-                  subHeading="Lorem"
-                  description="LOremLoremLoREMLoremLoReM"
-                  img={Mental}
-                />
+              <div className="m-4" style={{ maxWidth: sm ? "none" : "500px" }}>
+                <Feature heading="Strong Mind" img={Mental} />
 
-                <Feature
-                  heading="Physical Strength"
-                  subHeading="Lorem"
-                  description="LOremLoremLoREMLoremLoReM"
-                  img={Physical}
-                />
+                <Feature heading="Strong Body" img={Physical} />
 
-                <Feature
-                  heading="Education"
-                  subHeading="Lorem"
-                  description="LOremLoremLoREMLoremLoReM"
-                  img={Education}
-                />
+                <Feature heading="Life Long Learners" img={Education} />
+
+                <p
+                  style={{
+                    fontSize: "20px",
+                    color: "#fff",
+                    textAlign: "center",
+                    textShadow:
+                      "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+                  }}
+                >
+                  Solid Tech Wrestling Club prepares its athletes with the
+                  skills, knowledge, and experience it takes to become a
+                  champion. Get started with your wrestling journey by clicking
+                  the button below.
+                </p>
+
                 <a href="">
                   <button
                     className="position-relative btn btn-primary btn-lg w-100 shadow-med exo"
@@ -233,38 +226,91 @@ export default () => {
           </h2>
         </Header>
         <div className="mx-4 gallery-container">
-          <h1 style={{ color: "#555" }} className="text-center mb-4 pb-4">GALLERY</h1>
+          <h1 style={{ color: "#555" }} className="text-center mb-4 pb-4">
+            GALLERY
+          </h1>
           <div className="row mx-4">
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-              <Image objectFit="cover" width={400} height={250} src={Gallery1} className="gallery-img shadow" />
+              <Image
+                objectFit="cover"
+                width={400}
+                height={250}
+                src={Gallery1}
+                className="gallery-img shadow"
+              />
             </div>
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-              <Image objectFit="cover" width={400} height={250} src={Gallery2} className="gallery-img shadow" />
+              <Image
+                objectFit="cover"
+                width={400}
+                height={250}
+                src={Gallery2}
+                className="gallery-img shadow"
+              />
             </div>
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-              <Image objectFit="cover" width={400} height={250} src={Gallery3} className="gallery-img shadow" />
+              <Image
+                objectFit="cover"
+                width={400}
+                height={250}
+                src={Gallery3}
+                className="gallery-img shadow"
+              />
             </div>
           </div>
           <div className="row mx-4">
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-              <Image objectFit="cover" width={400} height={250} src={Gallery4} className="gallery-img shadow" />
+              <Image
+                objectFit="cover"
+                width={400}
+                height={250}
+                src={Gallery4}
+                className="gallery-img shadow"
+              />
             </div>
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-              <Image objectFit="cover" width={400} height={250} src={Gallery5} className="gallery-img shadow" />
+              <Image
+                objectFit="cover"
+                width={400}
+                height={250}
+                src={Gallery5}
+                className="gallery-img shadow"
+              />
             </div>
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-              <Image objectFit="cover" width={400} height={250} src={Gallery6} className="gallery-img shadow" />
+              <Image
+                objectFit="cover"
+                width={400}
+                height={250}
+                src={Gallery6}
+                className="gallery-img shadow"
+              />
             </div>
           </div>
           <div className="row mx-4">
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-              <Image width={400} height={250} src={Gallery7} className="gallery-img shadow" />
+              <Image
+                width={400}
+                height={250}
+                src={Gallery7}
+                className="gallery-img shadow"
+              />
             </div>
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-              <Image width={400} height={250} src={Gallery8} className="gallery-img shadow" />
+              <Image
+                width={400}
+                height={250}
+                src={Gallery8}
+                className="gallery-img shadow"
+              />
             </div>
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-              <Image width={400} height={250} src={Gallery9} className="gallery-img shadow" />
+              <Image
+                width={400}
+                height={250}
+                src={Gallery9}
+                className="gallery-img shadow"
+              />
             </div>
           </div>
         </div>
@@ -279,22 +325,35 @@ export default () => {
                 />
               </div>
             </div>
-            <div className="col col-12 col-md-6 d-flex flex-column align-items-center" style={{ height: "100%" }}>
+            <div
+              className="col col-12 col-md-6 d-flex flex-column align-items-center"
+              style={{ height: "100%" }}
+            >
               <div>
-                <h2 className="text-light text-center">Follow us on Instagram</h2>
+                <h2 className="text-light text-center">
+                  Follow us on Instagram
+                </h2>
               </div>
               <div className="w-100 d-flex justify-content-center mt-4 pt-4">
                 <div className="drop" style={{ maxWidth: 150 }}>
                   <Image src={InstagramLogo} />
                 </div>
               </div>
-              <a target={"_blank"} href="https://www.instagram.com/solidtechwrestlingclub/?utm_source=ig_embed">
-                <div style={{ maxWidth: 250, marginTop: 50 }} className="btn btn-primary btn-lg exo">FOLLOW SOLID TECH</div>
+              <a
+                target={"_blank"}
+                href="https://www.instagram.com/solidtechwrestlingclub/?utm_source=ig_embed"
+              >
+                <div
+                  style={{ maxWidth: 250, marginTop: 50 }}
+                  className="btn btn-primary btn-lg exo"
+                >
+                  FOLLOW SOLID TECH
+                </div>
               </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
