@@ -1,35 +1,35 @@
-import React, { useEffect, useState } from "react"
-import Image, { StaticImageData } from "next/image"
-import Lightning from "../img/lightning.png"
-import Tossed from "../img/tossed.jpg"
-import Mental from "../img/mental.png"
-import Physical from "../img/physical.png"
-import Education from "../img/education.png"
-import InstagramLogo from "../img/ig-logo.png"
-import { InstagramEmbed } from "react-social-media-embed"
+import React, { useEffect, useState } from "react";
+import Image, { StaticImageData } from "next/image";
+import Lightning from "../img/lightning.png";
+import Tossed from "../img/tossed.jpg";
+import Mental from "../img/mental.png";
+import Physical from "../img/physical.png";
+import Education from "../img/education.png";
+import InstagramLogo from "../img/ig-logo.png";
+import { InstagramEmbed } from "react-social-media-embed";
 
-import Gallery1 from "../img/gallery/1.jpg"
-import Gallery2 from "../img/gallery/2.jpg"
-import Gallery3 from "../img/gallery/3.jpg"
-import Gallery4 from "../img/gallery/4.png"
-import Gallery5 from "../img/gallery/5.png"
-import Gallery6 from "../img/gallery/6.png"
-import Gallery7 from "../img/gallery/7.jpg"
-import Gallery8 from "../img/gallery/8.jpg"
-import Gallery9 from "../img/gallery/9.jpg"
+import Gallery1 from "../img/gallery/1.jpg";
+import Gallery2 from "../img/gallery/2.jpg";
+import Gallery3 from "../img/gallery/3.jpg";
+import Gallery4 from "../img/gallery/4.png";
+import Gallery5 from "../img/gallery/5.png";
+import Gallery6 from "../img/gallery/6.png";
+import Gallery7 from "../img/gallery/7.jpg";
+import Gallery8 from "../img/gallery/8.jpg";
+import Gallery9 from "../img/gallery/9.jpg";
 
 interface HeaderProps {
-  children: React.ReactNode
-  color: string
-  flip?: boolean
-  className?: string
-  style?: React.CSSProperties
-  pre?: React.ReactNode
+  children: React.ReactNode;
+  color: string;
+  flip?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+  pre?: React.ReactNode;
 }
 
 interface FeatureProps {
-  img: StaticImageData
-  heading: string
+  img: StaticImageData;
+  heading: string;
 }
 
 const Header = (props: HeaderProps) => {
@@ -54,8 +54,8 @@ const Header = (props: HeaderProps) => {
       ></div>
       {props.pre}
     </div>
-  )
-}
+  );
+};
 
 const Feature = (props: FeatureProps) => {
   return (
@@ -85,34 +85,37 @@ const Feature = (props: FeatureProps) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 function useScreenSize() {
-  let [sm, setSm] = useState(false)
-  let [xs, setXs] = useState(false)
+  let [sm, setSm] = useState(false);
+  let [xs, setXs] = useState(false);
+
+  const checkWindowSize = () => {
+    if (window.innerWidth <= 992) {
+      setSm(true);
+    } else {
+      setSm(false);
+    }
+
+    if (window.innerWidth <= 576) {
+      setXs(true);
+    } else {
+      setXs(false);
+    }
+  };
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      if (window.innerWidth <= 992) {
-        setSm(true)
-      } else {
-        setSm(false)
-      }
+    window.addEventListener("resize", checkWindowSize);
+    checkWindowSize();
+  }, []);
 
-      if (window.innerWidth <= 576) {
-        setXs(true)
-      } else {
-        setXs(false)
-      }
-    })
-  }, [])
-
-  return { sm, xs }
+  return { sm, xs };
 }
 
 export default () => {
-  const { sm, xs } = useScreenSize()
+  const { sm, xs } = useScreenSize();
 
   return (
     <div className="mh-100 bg-darkish" style={{ paddingBottom: 50 }}>
@@ -153,7 +156,6 @@ export default () => {
               style={{
                 width: "100%",
                 height: "100%",
-                backgroundColor: xs ? "#000000d0" : "",
                 backgroundImage: xs
                   ? ""
                   : "linear-gradient(to right, #00000000, #200000a0)",
@@ -166,7 +168,7 @@ export default () => {
             >
               <Image
                 objectFit="cover"
-                objectPosition="left"
+                objectPosition={xs ? "-100px " : "left"}
                 layout={"fill"}
                 src={Tossed}
               />
@@ -246,7 +248,7 @@ export default () => {
         </Header>
         <div className="mx-4 gallery-container">
           <h1 style={{ color: "#555" }} className="text-center mb-4 pb-4">
-            GALLERY
+            Our Wrestlers
           </h1>
           <div className="row mx-4">
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
@@ -374,5 +376,5 @@ export default () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
