@@ -256,25 +256,23 @@ export default () => {
                 objectFit="cover"
                 width={400}
                 height={250}
-                src={Gallery1}
-                className="gallery-img shadow"
-              />
-            </div>
-            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-              <Image
-                objectFit="cover"
-                width={400}
-                height={250}
-                src={Gallery2}
-                className="gallery-img shadow"
-              />
-            </div>
-            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-              <Image
-                objectFit="cover"
-                width={400}
-                height={250}
                 src={Gallery3}
+                className="gallery-img shadow"
+              />
+            </div>
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+              <Image
+                width={400}
+                height={250}
+                src={Gallery7}
+                className="gallery-img shadow"
+              />
+            </div>
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+              <Image
+                width={400}
+                height={250}
+                src={Gallery8}
                 className="gallery-img shadow"
               />
             </div>
@@ -311,20 +309,14 @@ export default () => {
           <div className="row mx-4">
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
               <Image
+                objectFit="cover"
                 width={400}
                 height={250}
-                src={Gallery7}
+                src={Gallery2}
                 className="gallery-img shadow"
               />
             </div>
-            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-              <Image
-                width={400}
-                height={250}
-                src={Gallery8}
-                className="gallery-img shadow"
-              />
-            </div>
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container"></div>
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
               <Image
                 width={400}
