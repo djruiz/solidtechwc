@@ -7,8 +7,6 @@ import Physical from "../img/physical.png";
 import Education from "../img/education.png";
 import InstagramLogo from "../img/ig-logo.png";
 import { InstagramEmbed } from "react-social-media-embed";
-
-import Gallery1 from "../img/gallery/1.jpg";
 import Gallery2 from "../img/gallery/2.jpg";
 import Gallery3 from "../img/gallery/3.jpg";
 import Gallery4 from "../img/gallery/4.png";
