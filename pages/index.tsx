@@ -15,6 +15,7 @@ import Gallery6 from "../img/gallery/6.png";
 import Gallery7 from "../img/gallery/7.jpg";
 import Gallery8 from "../img/gallery/8.jpg";
 import Gallery9 from "../img/gallery/9.jpg";
+import Gallery10 from "../img/gallery.10.jpg";
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -314,7 +315,14 @@ export default () => {
                 className="gallery-img shadow"
               />
             </div>
-            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container"></div>
+            <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+              <Image
+                width={400}
+                height={250}
+                src={Gallery10}
+                className="gallery-img shadow"
+              />
+            </div>
             <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
               <Image
                 width={400}
