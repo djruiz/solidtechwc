@@ -246,26 +246,7 @@ export default () => {
             Stay. <span className="text-primary">Solid.</span>
           </h2>
         </Header>
-        <div className="mx-4 d-flex justify-content-center">
-          <div>
-            <Image
-              src={session2}
-              alt="Winter session 2 flier"
-              height={700}
-              width={500}
-            />
-          </div>
-          <div className="align-self-center text-center mx-4">
-            <h2
-              className="text-light me-0"
-              style={{ borderBottom: "white solid thick" }}
-            >
-              Session 2 Sign Up
-            </h2>
-            <div className="btn btn-primary btn-lg exo">Sign Up</div>
-          </div>
-        </div>
-        <div></div>
+
         <div className="mx-4 gallery-container">
           <h1 style={{ color: "#555" }} className="text-center mb-4 pb-4">
             Our Wrestlers
