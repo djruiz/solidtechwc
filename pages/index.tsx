@@ -247,6 +247,26 @@ export default () => {
           </h2>
         </Header>
 
+        <div className="mx-4 d-flex justify-content-center">
+          <div className="">
+            <Image
+              src={session2}
+              alt="Winter session 2 flier"
+              height={700}
+              width={500}
+            />
+            <h2
+              className="text-light me-0 text-center justify-content-center"
+              style={{ borderBottom: "white solid thick" }}
+            >
+              Session 2 Sign Up
+            </h2>
+            <div className=" d-flex justify-content-center">
+              <button className="btn btn-primary btn-lg">Sign Up</button>
+            </div>
+          </div>
+        </div>
+
         <div className="mx-4 gallery-container">
           <h1 style={{ color: "#555" }} className="text-center mb-4 pb-4">
             Our Wrestlers
