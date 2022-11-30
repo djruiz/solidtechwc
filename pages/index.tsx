@@ -257,7 +257,7 @@ export default () => {
             />
             <h2
               className="text-light me-0 text-center justify-content-center"
-              style={{ borderBottom: "white solid thick" }}
+              style={{}}
             >
               Session 2 Sign Up
             </h2>
@@ -266,54 +266,72 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className="container py-4" style={{ marginTop: "50px" }}>
-          <div className="row mx-4 text-light text-center">
-            <div className="col col-sm-12">
-              <h2>Get One on One Coaching</h2>
-              <h5>
+        <div
+          className="container py-4"
+          style={{
+            marginTop: "50px",
+            borderTop: "white solid ",
+            borderBottom: "white solid",
+          }}
+        >
+          <div className="row text-light text-center">
+            <div className="col col-sm-12 my-4">
+              <h2 className="mb-2 display-4" style={{}}>
+                Get One on One Coaching
+              </h2>
+              <h5
+                className="text-primary"
+                style={{
+                  textShadow:
+                    "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+                }}
+              >
                 Get in contact with our head coach today and find out how you
                 can take your wrestling to the next level
               </h5>
             </div>
             <div className="col col-md-6 col-sm-12 my-4 align-items-end">
-              <h4>Set up a private session</h4>
-              <p>
-                Get individual coaching and attention to get the instruction you
-                need. Private sessions allow the time and focus to work on the
-                small technical details to imrpove your wrestling. Click below
-                to get in touch and set up a session.
-              </p>
-              <div>
-                <a href="mailto:solidtechwrestlingclub@gmail.com?subject=Private coacing session&body=Hi Coach, I'm interested in setting up a private coaching session.">
-                  <button
-                    className="align-items-end btn btn-primary btn-lg w-100 shadow-med exo"
-                    style={{ fontSize: 24 }}
-                  >
-                    Private Sessions
-                  </button>
-                </a>
+              <div className="card shadow rounded p-4 bg-light text-dark">
+                <h4 className="text-primary">Set up a private session</h4>
+                <p className="my-4">
+                  Get individual coaching and attention to get the instruction
+                  you need. Private sessions allow the time and focus to work on
+                  the small technical details to improve your wrestling. Click
+                  below to get in touch and set up a session.
+                </p>
+                <div>
+                  <a href="mailto:solidtechwrestlingclub@gmail.com?subject=Private coacing session&body=Hi Coach, I'm interested in setting up a private coaching session.">
+                    <button
+                      className="align-items-end btn btn-primary btn-lg w-100 shadow-lg exo"
+                      style={{ fontSize: 24 }}
+                    >
+                      Private Sessions
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="col col-md-6 col-sm-12 my-4">
-              <h4>Set up a film review</h4>
-              <p>
-                Have film of your matches? Get in touch to set up a review
-                session which can be done live or in person. Our coach will
-                study the film and provide a comprehensive breakdown of what
-                happened and where you can improve!
-              </p>
-              <div className="align-items-end">
-                <a href="mailto:solidtechwrestlingclub@gmail.com?subject=Film Review session&body=Hi Coach, I'm interested in setting up a film review.">
-                  <button
-                    className="btn btn-primary btn-lg w-100 shadow-med exo"
-                    style={{ fontSize: 24 }}
-                  >
-                    Film Reviews
-                  </button>
-                </a>
+              <div className="card shadow rounded p-4 bg-light text-dark">
+                <h4 className="text-primary">Set up a film review</h4>
+                <p className="my-4">
+                  Have film of your matches? Get in touch to set up a review
+                  session which can be done live or in person. Our coach will
+                  study the film and provide a comprehensive breakdown of what
+                  happened and where you can improve!
+                </p>
+                <div className="align-items-end">
+                  <a href="mailto:solidtechwrestlingclub@gmail.com?subject=Film Review session&body=Hi Coach, I'm interested in setting up a film review.">
+                    <button
+                      className="btn btn-primary btn-lg w-100 shadow-lg exo"
+                      style={{ fontSize: 24 }}
+                    >
+                      Film Reviews
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
-            <div className="col col-md-6 col-sm-12"></div>
           </div>
         </div>
 
