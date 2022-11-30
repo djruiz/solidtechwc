@@ -7,6 +7,8 @@ import Physical from "../img/physical.png";
 import Education from "../img/education.png";
 import InstagramLogo from "../img/ig-logo.png";
 import { InstagramEmbed } from "react-social-media-embed";
+import privates from "../img/privates.png";
+import film from "../img/film-review.png";
 import session2 from "../img/session2.png";
 import Gallery2 from "../img/gallery/2.jpg";
 import Gallery3 from "../img/gallery/3.jpg";
@@ -293,6 +295,14 @@ export default () => {
             <div className="col col-md-6 col-sm-12 my-4 align-items-end">
               <div className="card shadow rounded p-4 bg-light text-dark">
                 <h4 className="text-primary">Set up a private session</h4>
+                <div>
+                  <Image
+                    src={privates}
+                    alt="Person helping another person up a step"
+                    height={200}
+                    width={200}
+                  />
+                </div>
                 <p className="my-4">
                   Get individual coaching and attention to get the instruction
                   you need. Private sessions allow the time and focus to work on
@@ -314,6 +324,14 @@ export default () => {
             <div className="col col-md-6 col-sm-12 my-4">
               <div className="card shadow rounded p-4 bg-light text-dark">
                 <h4 className="text-primary">Set up a film review</h4>
+                <div>
+                  <Image
+                    src={film}
+                    alt="Magnifying glass over wrestlers"
+                    height={200}
+                    width={200}
+                  />
+                </div>
                 <p className="my-4">
                   Have film of your matches? Get in touch to set up a review
                   session which can be done live or in person. Our coach will
