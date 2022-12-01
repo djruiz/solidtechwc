@@ -7,6 +7,8 @@ import Physical from "../img/physical.png"
 import Education from "../img/education.png"
 import InstagramLogo from "../img/ig-logo.png"
 import { InstagramEmbed } from "react-social-media-embed"
+import privates from "../img/privates.png"
+import film from "../img/film-review.png"
 import Gallery2 from "../img/gallery/2.jpg"
 import Gallery3 from "../img/gallery/3.jpg"
 import Gallery4 from "../img/gallery/4.png"
@@ -269,138 +271,239 @@ export default () => {
               <div className=" d-flex justify-content-center">
                 <button className="btn btn-primary btn-lg">Sign Up</button>
               </div>
-            </div>
-          </div>
-
-          <div className="mx-4 gallery-container">
-            <h1 style={{ color: "#555" }} className="text-center mb-4 pb-4">
-              Our Wrestlers
-            </h1>
-            <div className="row mx-4">
-              <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-                <Image
-                  objectFit="cover"
-                  width={400}
-                  height={250}
-                  src={Gallery3}
-                  className="gallery-img shadow"
-                />
-              </div>
-              <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-                <Image
-                  width={400}
-                  height={250}
-                  src={Gallery7}
-                  className="gallery-img shadow"
-                />
-              </div>
-              <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-                <Image
-                  width={400}
-                  height={250}
-                  src={Gallery8}
-                  className="gallery-img shadow"
-                />
-              </div>
-            </div>
-            <div className="row mx-4">
-              <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-                <Image
-                  objectFit="cover"
-                  width={400}
-                  height={250}
-                  src={Gallery4}
-                  className="gallery-img shadow"
-                />
-              </div>
-              <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-                <Image
-                  objectFit="cover"
-                  width={400}
-                  height={250}
-                  src={Gallery5}
-                  className="gallery-img shadow"
-                />
-              </div>
-              <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-                <Image
-                  objectFit="cover"
-                  width={400}
-                  height={250}
-                  src={Gallery6}
-                  className="gallery-img shadow"
-                />
-              </div>
-            </div>
-            <div className="row mx-4">
-              <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-                <Image
-                  objectFit="cover"
-                  width={400}
-                  height={250}
-                  src={Gallery2}
-                  className="gallery-img shadow"
-                />
-              </div>
-              <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-                <Image
-                  width={400}
-                  height={250}
-                  src={Gallery10}
-                  className="gallery-img shadow"
-                />
-              </div>
-              <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
-                <Image
-                  width={400}
-                  height={250}
-                  src={Gallery9}
-                  className="gallery-img shadow"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="container py-4" style={{ marginTop: "50px" }}>
-            <div className="row flex-row-reverse">
-              <div className="col col-12 col-md-6 mb-4 pb-4">
-                <div>
-                  <InstagramEmbed
-                    url="https://www.instagram.com/solidtechwrestlingclub/?hl=en"
-                    height={"100%"}
-                    width={"100%"}
+              <div className="mx-4 d-flex justify-content-center">
+                <div className="">
+                  <Image
+                    src={session2}
+                    alt="Winter session 2 flier"
+                    height={700}
+                    width={500}
                   />
+                  <h2
+                    className="text-light me-0 text-center justify-content-center"
+                    style={{}}
+                  >
+                    Session 2 Sign Up
+                  </h2>
+                  <div className=" d-flex justify-content-center">
+                    <button className="btn btn-primary btn-lg">Sign Up</button>
+                  </div>
                 </div>
               </div>
               <div
-                className="col col-12 col-md-6 d-flex flex-column align-items-center"
-                style={{ height: "100%" }}
+                className="container py-4"
+                style={{
+                  marginTop: "50px",
+                  borderTop: "white solid ",
+                  borderBottom: "white solid",
+                }}
               >
-                <div>
-                  <h2 className="text-light text-center">
-                    Follow us on Instagram
-                  </h2>
-                </div>
-                <div className="w-100 d-flex justify-content-center mt-4 pt-4">
-                  <div className="drop" style={{ maxWidth: 150 }}>
-                    <Image src={InstagramLogo} />
+                <div className="row text-light text-center">
+                  <div className="col col-sm-12 my-4">
+                    <h2 className="mb-2 display-4" style={{}}>
+                      Get One on One Coaching
+                    </h2>
+                    <h5
+                      className="text-primary"
+                      style={{
+                        textShadow:
+                          "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+                      }}
+                    >
+                      Get in contact with our head coach today and find out how you
+                      can take your wrestling to the next level
+                    </h5>
+                  </div>
+                  <div className="col col-md-6 col-sm-12 my-4 align-items-end">
+                    <div className="card shadow rounded p-4 bg-light text-dark">
+                      <h4 className="text-primary">Set up a private session</h4>
+                      <div>
+                        <Image
+                          src={privates}
+                          alt="Person helping another person up a step"
+                          height={200}
+                          width={200}
+                        />
+                      </div>
+                      <p className="my-4">
+                        Get individual coaching and attention to get the instruction
+                        you need. Private sessions allow the time and focus to work on
+                        the small technical details to improve your wrestling. Click
+                        below to get in touch and set up a session.
+                      </p>
+                      <div>
+                        <a href="mailto:solidtechwrestlingclub@gmail.com?subject=Private coacing session&body=Hi Coach, I'm interested in setting up a private coaching session.">
+                          <button
+                            className="align-items-end btn btn-primary btn-lg w-100 shadow-lg exo"
+                            style={{ fontSize: 24 }}
+                          >
+                            Private Sessions
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col col-md-6 col-sm-12 my-4">
+                    <div className="card shadow rounded p-4 bg-light text-dark">
+                      <h4 className="text-primary">Set up a film review</h4>
+                      <div>
+                        <Image
+                          src={film}
+                          alt="Magnifying glass over wrestlers"
+                          height={200}
+                          width={200}
+                        />
+                      </div>
+                      <p className="my-4">
+                        Have film of your matches? Get in touch to set up a review
+                        session which can be done live or in person. Our coach will
+                        study the film and provide a comprehensive breakdown of what
+                        happened and where you can improve!
+                      </p>
+                      <div className="align-items-end">
+                        <a href="mailto:solidtechwrestlingclub@gmail.com?subject=Film Review session&body=Hi Coach, I'm interested in setting up a film review.">
+                          <button
+                            className="btn btn-primary btn-lg w-100 shadow-lg exo"
+                            style={{ fontSize: 24 }}
+                          >
+                            Film Reviews
+                          </button>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <a
-                  target={"_blank"}
-                  href="https://www.instagram.com/solidtechwrestlingclub/?utm_source=ig_embed"
-                >
+              </div>
+
+              <div className="mx-4 gallery-container">
+                <h1 style={{ color: "#555" }} className="text-center mb-4 pb-4">
+                  Our Wrestlers
+                </h1>
+                <div className="row mx-4">
+                  <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+                    <Image
+                      objectFit="cover"
+                      width={400}
+                      height={250}
+                      src={Gallery3}
+                      className="gallery-img shadow"
+                    />
+                  </div>
+                  <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+                    <Image
+                      width={400}
+                      height={250}
+                      src={Gallery7}
+                      className="gallery-img shadow"
+                    />
+                  </div>
+                  <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+                    <Image
+                      width={400}
+                      height={250}
+                      src={Gallery8}
+                      className="gallery-img shadow"
+                    />
+                  </div>
+                </div>
+                <div className="row mx-4">
+                  <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+                    <Image
+                      objectFit="cover"
+                      width={400}
+                      height={250}
+                      src={Gallery4}
+                      className="gallery-img shadow"
+                    />
+                  </div>
+                  <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+                    <Image
+                      objectFit="cover"
+                      width={400}
+                      height={250}
+                      src={Gallery5}
+                      className="gallery-img shadow"
+                    />
+                  </div>
+                  <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+                    <Image
+                      objectFit="cover"
+                      width={400}
+                      height={250}
+                      src={Gallery6}
+                      className="gallery-img shadow"
+                    />
+                  </div>
+                </div>
+                <div className="row mx-4">
+                  <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+                    <Image
+                      objectFit="cover"
+                      width={400}
+                      height={250}
+                      src={Gallery2}
+                      className="gallery-img shadow"
+                    />
+                  </div>
+                  <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+                    <Image
+                      width={400}
+                      height={250}
+                      src={Gallery10}
+                      className="gallery-img shadow"
+                    />
+                  </div>
+                  <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
+                    <Image
+                      width={400}
+                      height={250}
+                      src={Gallery9}
+                      className="gallery-img shadow"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="container py-4" style={{ marginTop: "50px" }}>
+                <div className="row flex-row-reverse">
+                  <div className="col col-12 col-md-6 mb-4 pb-4">
+                    <div>
+                      <InstagramEmbed
+                        url="https://www.instagram.com/solidtechwrestlingclub/?hl=en"
+                        height={"100%"}
+                        width={"100%"}
+                      />
+                    </div>
+                  </div>
                   <div
-                    style={{ maxWidth: 250, marginTop: 50 }}
-                    className="btn btn-primary btn-lg exo"
+                    className="col col-12 col-md-6 d-flex flex-column align-items-center"
+                    style={{ height: "100%" }}
                   >
-                    FOLLOW SOLID TECH
+                    <div>
+                      <h2 className="text-light text-center">
+                        Follow us on Instagram
+                      </h2>
+                    </div>
+                    <div className="w-100 d-flex justify-content-center mt-4 pt-4">
+                      <div className="drop" style={{ maxWidth: 150 }}>
+                        <Image src={InstagramLogo} />
+                      </div>
+                    </div>
+                    <a
+                      target={"_blank"}
+                      href="https://www.instagram.com/solidtechwrestlingclub/?utm_source=ig_embed"
+                    >
+                      <div
+                        style={{ maxWidth: 250, marginTop: 50 }}
+                        className="btn btn-primary btn-lg exo"
+                      >
+                        FOLLOW SOLID TECH
+                      </div>
+                    </a>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </>
-  )
+        </>
+        )
 }
