@@ -7,8 +7,6 @@ import Physical from "../img/physical.png"
 import Education from "../img/education.png"
 import InstagramLogo from "../img/ig-logo.png"
 import { InstagramEmbed } from "react-social-media-embed"
-import privates from "../img/privates.png"
-import film from "../img/film-review.png"
 import Gallery2 from "../img/gallery/2.jpg"
 import Gallery3 from "../img/gallery/3.jpg"
 import Gallery4 from "../img/gallery/4.png"
@@ -18,8 +16,11 @@ import Gallery7 from "../img/gallery/7.jpg"
 import Gallery8 from "../img/gallery/8.jpg"
 import Gallery9 from "../img/gallery/9.jpg"
 import Gallery10 from "../img/gallery/10.jpg"
-import session2 from "../img/session2.png"
 import Head from "next/head"
+import Link from "next/link"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faStar } from "@fortawesome/free-regular-svg-icons"
+import { faVideoCamera } from "@fortawesome/free-solid-svg-icons"
 
 interface HeaderProps {
   children: React.ReactNode
@@ -214,15 +215,13 @@ export default () => {
                     skills, knowledge, and experience it takes to win. Join us
                     today and become a champion.
                   </p>
-
-                  <a href="mailto:solidtechwrestlingclub@gmail.com?subject=Joining Solid Tech WC&body=Hi Coach, I'm interested in joining Solid Tech Wresting Club.">
+                  <Link href="https://buy.stripe.com/6oE8yo9ZQ8yq5u89AA">
                     <button
                       className="position-relative btn btn-primary btn-lg w-100 shadow-med exo"
-                      style={{ fontSize: 24 }}
                     >
                       JOIN TODAY
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -253,78 +252,91 @@ export default () => {
               Stay. <span className="text-primary">Solid.</span>
             </h2>
           </Header>
-
-          <div className="mx-4 d-flex justify-content-center">
-            <div className="">
-              <Image
-                src={session2}
-                alt="Winter session 2 flier"
-                height={700}
-                width={500}
-              />
-              <h2
-                className="text-light me-0 text-center justify-content-center"
-                style={{ borderBottom: "white solid thick" }}
-              >
-                Session 2 Sign Up
-              </h2>
-              <div className=" d-flex justify-content-center">
-                <button className="btn btn-primary btn-lg">Sign Up</button>
-              </div>
-              <div className="mx-4 d-flex justify-content-center">
-                <div className="">
-                  <Image
-                    src={session2}
-                    alt="Winter session 2 flier"
-                    height={700}
-                    width={500}
-                  />
-                  <h2
-                    className="text-light me-0 text-center justify-content-center"
-                    style={{}}
-                  >
-                    Session 2 Sign Up
-                  </h2>
-                  <div className=" d-flex justify-content-center">
-                    <button className="btn btn-primary btn-lg">Sign Up</button>
+          <div>
+            <div className="container text-light mt-5">
+              <div style={{}} className="bg-dark shadow rounded p-5">
+                <div className="row">
+                  <div className="col-12 col-md-6">
+                    <div>
+                      <h1><span className="text-primary">Solid Tech</span><br /> Youth Wrestling Program</h1>
+                      <h3 className="exo">Winter Session 2</h3>
+                    </div>
+                    <hr style={{ borderColor: "white" }} />
+                    <div>
+                      <div className="mt-4">
+                        <div>
+                          <h4 className="exo">Schedule:</h4>
+                          <p>Tuesdays 5-6pm & Sundays 1-2pm</p>
+                        </div>
+                        <div>
+                          <h4 className="exo">What You Get:</h4>
+                          <ul>
+                            <li>8 Youth Practices</li>
+                            <li>Club Logo Sticker</li>
+                            <li>Match Day</li>
+                            <li>A Medal on Match Day</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col col-xs-12 col-md-6">
+                    <div className="bg-light shadow rounded text-dark p-4 text-center">
+                      <div className="d-flex justify-content-around align-items-center" style={{ flexDirection: sm ? "column" : "row" }}>
+                        <div className="mx-2">
+                          <h4 className="p-0 m-0">70$</h4>
+                          <p className="p-0 m-0">Per Kid</p>
+                        </div>
+                        <div className="bg-primary my-4" style={{ width: sm ? "100%" : "2px", height: sm ? "2px" : "50px" }}></div>
+                        <div className="mx-2">
+                          <p className="p-0 m-0">Youth Age</p>
+                          <h4 className="p-0 m-0">5-11</h4>
+                        </div>
+                        <div className="bg-primary my-4" style={{ width: sm ? "100%" : "2px", height: sm ? "2px" : "50px" }}></div>
+                        <div className="mx-2">
+                          <h4 className="p-0 m-0">Dec 4th-Jan 3rd</h4>
+                          <p className="p-0 m-0">2022-2023</p>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="my-4" style={{ color: "#aaa" }}>Now is the time to sign up for youth wrestling at Solid Tech Wrestling Club! Our winter session will consist of 8 youth practices, teaching the sport to beginners and developing the experienced kids with opprotunities to build off of what they already know. We will set up matches for kids within the same weight and age limit.</p>
+                    <div className="mb-4">
+                      <p className="exo m-0 p-0"><b>Location:{" "}</b><span>1519 Goshen Road @ The Fort Wrestling Facility</span></p>
+                      <p className="exo m-0 p-0"><b>Contact:{" "}</b><span>Coach Bolden (260) 515 - 5620</span></p>
+                    </div>
+                    <div>
+                      <Link href="https://buy.stripe.com/bIY2a01tk7um3m0aEF">
+                        <button className="btn btn-primary btn-lg w-100">Sign Up</button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div>
               <div
                 className="container py-4"
                 style={{
                   marginTop: "50px",
-                  borderTop: "white solid ",
-                  borderBottom: "white solid",
                 }}
               >
+                <div className="my-5 text-light text-center">
+                  <h2 className="mb-2 display-4 exo" style={{}}>
+                    GET ONE-ON-ONE COACHING
+                  </h2>
+                  <h5
+                  >
+                    Get in contact with our head coach today and find out how you
+                    can take your wrestling to the next level.
+                  </h5>
+                </div>
                 <div className="row text-light text-center">
-                  <div className="col col-sm-12 my-4">
-                    <h2 className="mb-2 display-4" style={{}}>
-                      Get One on One Coaching
-                    </h2>
-                    <h5
-                      className="text-primary"
-                      style={{
-                        textShadow:
-                          "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
-                      }}
-                    >
-                      Get in contact with our head coach today and find out how you
-                      can take your wrestling to the next level
-                    </h5>
-                  </div>
-                  <div className="col col-md-6 col-sm-12 my-4 align-items-end">
-                    <div className="card shadow rounded p-4 bg-light text-dark">
-                      <h4 className="text-primary">Set up a private session</h4>
-                      <div>
-                        <Image
-                          src={privates}
-                          alt="Person helping another person up a step"
-                          height={200}
-                          width={200}
-                        />
+                  <div className="col col-md-6 col-12 mb-4 align-items-end">
+                    <div className="card border border-primary shadow rounded p-4 bg-dark text-light">
+                      <div className="text-primary">
+                        <FontAwesomeIcon size="4x" icon={faStar} />
                       </div>
+                      <h4 className="text-primary mt-4">Set up a private session</h4>
                       <p className="my-4">
                         Get individual coaching and attention to get the instruction
                         you need. Private sessions allow the time and focus to work on
@@ -343,17 +355,12 @@ export default () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col col-md-6 col-sm-12 my-4">
-                    <div className="card shadow rounded p-4 bg-light text-dark">
-                      <h4 className="text-primary">Set up a film review</h4>
-                      <div>
-                        <Image
-                          src={film}
-                          alt="Magnifying glass over wrestlers"
-                          height={200}
-                          width={200}
-                        />
+                  <div className="col col-md-6 col-sm-12 mb-4">
+                    <div className="card border border-primary shadow rounded p-4 bg-dark text-light">
+                      <div className="text-primary">
+                        <FontAwesomeIcon size="4x" icon={faVideoCamera} />
                       </div>
+                      <h4 className="text-primary mt-4">Set up a film review</h4>
                       <p className="my-4">
                         Have film of your matches? Get in touch to set up a review
                         session which can be done live or in person. Our coach will
@@ -374,8 +381,7 @@ export default () => {
                   </div>
                 </div>
               </div>
-
-              <div className="mx-4 gallery-container">
+              <div className="gallery-container">
                 <h1 style={{ color: "#555" }} className="text-center mb-4 pb-4">
                   Our Wrestlers
                 </h1>
