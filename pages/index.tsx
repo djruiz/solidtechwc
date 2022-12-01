@@ -1,39 +1,39 @@
-import React, { useEffect, useState } from "react"
-import Image, { StaticImageData } from "next/image"
-import Lightning from "../img/lightning.png"
-import Tossed from "../img/tossed.jpg"
-import Mental from "../img/mental.png"
-import Physical from "../img/physical.png"
-import Education from "../img/education.png"
-import InstagramLogo from "../img/ig-logo.png"
-import { InstagramEmbed } from "react-social-media-embed"
-import Gallery2 from "../img/gallery/2.jpg"
-import Gallery3 from "../img/gallery/3.jpg"
-import Gallery4 from "../img/gallery/4.png"
-import Gallery5 from "../img/gallery/5.png"
-import Gallery6 from "../img/gallery/6.png"
-import Gallery7 from "../img/gallery/7.jpg"
-import Gallery8 from "../img/gallery/8.jpg"
-import Gallery9 from "../img/gallery/9.jpg"
-import Gallery10 from "../img/gallery/10.jpg"
-import Head from "next/head"
-import Link from "next/link"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faStar } from "@fortawesome/free-regular-svg-icons"
-import { faVideoCamera } from "@fortawesome/free-solid-svg-icons"
+import React, { useEffect, useState } from "react";
+import Image, { StaticImageData } from "next/image";
+import Lightning from "../img/lightning.png";
+import Tossed from "../img/tossed.jpg";
+import Mental from "../img/mental.png";
+import Physical from "../img/physical.png";
+import Education from "../img/education.png";
+import InstagramLogo from "../img/ig-logo.png";
+import { InstagramEmbed } from "react-social-media-embed";
+import Gallery2 from "../img/gallery/2.jpg";
+import Gallery3 from "../img/gallery/3.jpg";
+import Gallery4 from "../img/gallery/4.png";
+import Gallery5 from "../img/gallery/5.png";
+import Gallery6 from "../img/gallery/6.png";
+import Gallery7 from "../img/gallery/7.jpg";
+import Gallery8 from "../img/gallery/8.jpg";
+import Gallery9 from "../img/gallery/9.jpg";
+import Gallery10 from "../img/gallery/10.jpg";
+import Head from "next/head";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-regular-svg-icons";
+import { faVideoCamera } from "@fortawesome/free-solid-svg-icons";
 
 interface HeaderProps {
-  children: React.ReactNode
-  color: string
-  flip?: boolean
-  className?: string
-  style?: React.CSSProperties
-  pre?: React.ReactNode
+  children: React.ReactNode;
+  color: string;
+  flip?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+  pre?: React.ReactNode;
 }
 
 interface FeatureProps {
-  img: StaticImageData
-  heading: string
+  img: StaticImageData;
+  heading: string;
 }
 
 const Header = (props: HeaderProps) => {
@@ -58,8 +58,8 @@ const Header = (props: HeaderProps) => {
       ></div>
       {props.pre}
     </div>
-  )
-}
+  );
+};
 
 const Feature = (props: FeatureProps) => {
   return (
@@ -89,37 +89,37 @@ const Feature = (props: FeatureProps) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 function useScreenSize() {
-  let [sm, setSm] = useState(false)
-  let [xs, setXs] = useState(false)
+  let [sm, setSm] = useState(false);
+  let [xs, setXs] = useState(false);
 
   const checkWindowSize = () => {
     if (window.innerWidth <= 992) {
-      setSm(true)
+      setSm(true);
     } else {
-      setSm(false)
+      setSm(false);
     }
 
     if (window.innerWidth <= 576) {
-      setXs(true)
+      setXs(true);
     } else {
-      setXs(false)
+      setXs(false);
     }
-  }
+  };
 
   useEffect(() => {
-    window.addEventListener("resize", checkWindowSize)
-    checkWindowSize()
-  }, [])
+    window.addEventListener("resize", checkWindowSize);
+    checkWindowSize();
+  }, []);
 
-  return { sm, xs }
+  return { sm, xs };
 }
 
 export default () => {
-  const { sm, xs } = useScreenSize()
+  const { sm, xs } = useScreenSize();
 
   return (
     <>
@@ -195,7 +195,10 @@ export default () => {
                   marginTop: sm ? 0 : "5vh",
                 }}
               >
-                <div className="m-4" style={{ maxWidth: sm ? "none" : "500px" }}>
+                <div
+                  className="m-4"
+                  style={{ maxWidth: sm ? "none" : "500px" }}
+                >
                   <Feature heading="Strong Mind" img={Mental} />
 
                   <Feature heading="Strong Body" img={Physical} />
@@ -216,9 +219,7 @@ export default () => {
                     today and become a champion.
                   </p>
                   <Link href="https://buy.stripe.com/6oE8yo9ZQ8yq5u89AA">
-                    <button
-                      className="position-relative btn btn-primary btn-lg w-100 shadow-med exo"
-                    >
+                    <button className="position-relative btn btn-primary btn-lg w-100 shadow-med exo">
                       JOIN TODAY
                     </button>
                   </Link>
@@ -258,7 +259,10 @@ export default () => {
                 <div className="row">
                   <div className="col-12 col-md-6">
                     <div>
-                      <h1><span className="text-primary">Solid Tech</span><br /> Youth Wrestling Program</h1>
+                      <h1>
+                        <span className="text-primary">Solid Tech</span>
+                        <br /> Youth Wrestling Program
+                      </h1>
                       <h3 className="exo">Winter Session 2</h3>
                     </div>
                     <hr style={{ borderColor: "white" }} />
@@ -282,31 +286,63 @@ export default () => {
                   </div>
                   <div className="col col-xs-12 col-md-6">
                     <div className="bg-light shadow rounded text-dark p-4 text-center">
-                      <div className="d-flex justify-content-around align-items-center" style={{ flexDirection: sm ? "column" : "row" }}>
+                      <div
+                        className="d-flex justify-content-around align-items-center"
+                        style={{ flexDirection: sm ? "column" : "row" }}
+                      >
                         <div className="mx-2">
                           <h4 className="p-0 m-0">70$</h4>
                           <p className="p-0 m-0">Per Kid</p>
                         </div>
-                        <div className="bg-primary my-4" style={{ width: sm ? "100%" : "2px", height: sm ? "2px" : "50px" }}></div>
+                        <div
+                          className="bg-primary my-4"
+                          style={{
+                            width: sm ? "100%" : "2px",
+                            height: sm ? "2px" : "50px",
+                          }}
+                        ></div>
                         <div className="mx-2">
                           <p className="p-0 m-0">Youth Age</p>
                           <h4 className="p-0 m-0">5-11</h4>
                         </div>
-                        <div className="bg-primary my-4" style={{ width: sm ? "100%" : "2px", height: sm ? "2px" : "50px" }}></div>
+                        <div
+                          className="bg-primary my-4"
+                          style={{
+                            width: sm ? "100%" : "2px",
+                            height: sm ? "2px" : "50px",
+                          }}
+                        ></div>
                         <div className="mx-2">
                           <h4 className="p-0 m-0">Dec 4th-Jan 3rd</h4>
                           <p className="p-0 m-0">2022-2023</p>
                         </div>
                       </div>
                     </div>
-                    <p className="my-4" style={{ color: "#aaa" }}>Now is the time to sign up for youth wrestling at Solid Tech Wrestling Club! Our winter session will consist of 8 youth practices, teaching the sport to beginners and developing the experienced kids with opprotunities to build off of what they already know. We will set up matches for kids within the same weight and age limit.</p>
+                    <p className="my-4" style={{ color: "#aaa" }}>
+                      Now is the time to sign up for youth wrestling at Solid
+                      Tech Wrestling Club! Our winter session will consist of 8
+                      youth practices, teaching the sport to beginners and
+                      developing the experienced kids with opprotunities to
+                      build off of what they already know. We will set up
+                      matches for kids within the same weight and age limit.
+                    </p>
                     <div className="mb-4">
-                      <p className="exo m-0 p-0"><b>Location:{" "}</b><span>1519 Goshen Road @ The Fort Wrestling Facility</span></p>
-                      <p className="exo m-0 p-0"><b>Contact:{" "}</b><span>Coach Bolden (260) 515 - 5620</span></p>
+                      <p className="exo m-0 p-0">
+                        <b>Location: </b>
+                        <span>
+                          1519 Goshen Road @ The Fort Wrestling Facility
+                        </span>
+                      </p>
+                      <p className="exo m-0 p-0">
+                        <b>Contact: </b>
+                        <span>Coach Bolden (260) 515 - 5620</span>
+                      </p>
                     </div>
                     <div>
                       <Link href="https://buy.stripe.com/bIY2a01tk7um3m0aEF">
-                        <button className="btn btn-primary btn-lg w-100">Sign Up</button>
+                        <button className="btn btn-primary btn-lg w-100">
+                          Sign Up
+                        </button>
                       </Link>
                     </div>
                   </div>
@@ -324,10 +360,9 @@ export default () => {
                   <h2 className="mb-2 display-4 exo" style={{}}>
                     GET ONE-ON-ONE COACHING
                   </h2>
-                  <h5
-                  >
-                    Get in contact with our head coach today and find out how you
-                    can take your wrestling to the next level.
+                  <h5>
+                    Get in contact with our head coach today and find out how
+                    you can take your wrestling to the next level.
                   </h5>
                 </div>
                 <div className="row text-light text-center">
@@ -336,12 +371,15 @@ export default () => {
                       <div className="text-primary">
                         <FontAwesomeIcon size="4x" icon={faStar} />
                       </div>
-                      <h4 className="text-primary mt-4">Set up a private session</h4>
+                      <h4 className="text-primary mt-4">
+                        Set up a private session
+                      </h4>
                       <p className="my-4">
-                        Get individual coaching and attention to get the instruction
-                        you need. Private sessions allow the time and focus to work on
-                        the small technical details to improve your wrestling. Click
-                        below to get in touch and set up a session.
+                        Get individual coaching and attention to get the
+                        instruction you need. Private sessions allow the time
+                        and focus to work on the small technical details to
+                        improve your wrestling. Click below to get in touch and
+                        set up a session.
                       </p>
                       <div>
                         <a href="mailto:solidtechwrestlingclub@gmail.com?subject=Private coacing session&body=Hi Coach, I'm interested in setting up a private coaching session.">
@@ -360,12 +398,15 @@ export default () => {
                       <div className="text-primary">
                         <FontAwesomeIcon size="4x" icon={faVideoCamera} />
                       </div>
-                      <h4 className="text-primary mt-4">Set up a film review</h4>
+                      <h4 className="text-primary mt-4">
+                        Set up a film review
+                      </h4>
                       <p className="my-4">
-                        Have film of your matches? Get in touch to set up a review
-                        session which can be done live or in person. Our coach will
-                        study the film and provide a comprehensive breakdown of what
-                        happened and where you can improve!
+                        Have film of your matches? Send our coach an email to
+                        set up a review session, which can be done online or in
+                        person. Our coach will study the film and provide a
+                        comprehensive breakdown of what happened and where you
+                        can improve!
                       </p>
                       <div className="align-items-end">
                         <a href="mailto:solidtechwrestlingclub@gmail.com?subject=Film Review session&body=Hi Coach, I'm interested in setting up a film review.">
@@ -513,5 +554,5 @@ export default () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
