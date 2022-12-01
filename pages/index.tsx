@@ -17,6 +17,7 @@ import Gallery8 from "../img/gallery/8.jpg"
 import Gallery9 from "../img/gallery/9.jpg"
 import Gallery10 from "../img/gallery/10.jpg"
 import session2 from "../img/session2.png"
+import Head from "next/head"
 
 interface HeaderProps {
   children: React.ReactNode
