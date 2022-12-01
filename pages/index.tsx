@@ -381,11 +381,11 @@ export default () => {
                   </div>
                 </div>
               </div>
-              <div className="gallery-container">
+              <div className="gallery-container container">
                 <h1 style={{ color: "#555" }} className="text-center mb-4 pb-4">
                   Our Wrestlers
                 </h1>
-                <div className="row mx-4">
+                <div className="row">
                   <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
                     <Image
                       objectFit="cover"
@@ -412,7 +412,7 @@ export default () => {
                     />
                   </div>
                 </div>
-                <div className="row mx-4">
+                <div className="row">
                   <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
                     <Image
                       objectFit="cover"
@@ -441,7 +441,7 @@ export default () => {
                     />
                   </div>
                 </div>
-                <div className="row mx-4">
+                <div className="row">
                   <div className="col mb-4 pb-4 col-12 col-md-4 gallery-img-container">
                     <Image
                       objectFit="cover"
