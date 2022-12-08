@@ -218,7 +218,7 @@ export default () => {
                     skills, knowledge, and experience it takes to win. Join us
                     today and become a champion.
                   </p>
-                  <Link href="https://buy.stripe.com/6oE8yo9ZQ8yq5u89AA">
+                  <Link href="https://buy.stripe.com/6oEg0Qc7Y7um8Gk4gi">
                     <button className="position-relative btn btn-primary btn-lg w-100 shadow-med exo">
                       JOIN TODAY
                     </button>
