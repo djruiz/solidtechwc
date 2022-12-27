@@ -263,7 +263,7 @@ export default () => {
                         <span className="text-primary">Solid Tech</span>
                         <br /> Youth Wrestling Program
                       </h1>
-                      <h3 className="exo">Winter Session 2</h3>
+                      <h3 className="exo">Winter Session 3</h3>
                     </div>
                     <hr style={{ borderColor: "white" }} />
                     <div>
@@ -313,15 +313,15 @@ export default () => {
                           }}
                         ></div>
                         <div className="mx-2">
-                          <h4 className="p-0 m-0">Dec 4th-Jan 3rd</h4>
+                          <h4 className="p-0 m-0">Jan 8th-Jan 31st</h4>
                           <p className="p-0 m-0">2022-2023</p>
                         </div>
                       </div>
                     </div>
                     <p className="my-4" style={{ color: "#aaa" }}>
                       Now is the time to sign up for youth wrestling at Solid
-                      Tech Wrestling Club! Our winter session will consist of 8
-                      youth practices, teaching the sport to beginners and
+                      Tech Wrestling Club! Our winter session 3 will consist of
+                      8 youth practices, teaching the sport to beginners and
                       developing the experienced kids with opprotunities to
                       build off of what they already know. We will set up
                       matches for kids within the same weight and age limit.
