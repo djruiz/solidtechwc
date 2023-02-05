@@ -238,7 +238,7 @@ export default () => {
                   top: -1,
                 }}
               >
-                Practice Times: Sun @ 2-3PM &amp; Tuesdays @ 6-7pm
+                Practice Times: Tuesdays &amp; Fridays @ 5-7pm
               </p>
             }
             color="#fff"
@@ -253,7 +253,9 @@ export default () => {
               Stay. <span className="text-primary">Solid.</span>
             </h2>
           </Header>
+
           <div>
+            {/*
             <div className="container text-light mt-5">
               <div style={{}} className="bg-dark shadow rounded p-5">
                 <div className="row">
@@ -270,7 +272,7 @@ export default () => {
                       <div className="mt-4">
                         <div>
                           <h4 className="exo">Schedule:</h4>
-                          <p>Tuesdays 5-6pm & Sundays 1-2pm</p>
+                          <p>Tuesdays & Fridays 6-7pm</p>
                         </div>
                         <div>
                           <h4 className="exo">What You Get:</h4>
@@ -349,6 +351,7 @@ export default () => {
                 </div>
               </div>
             </div>
+                          */}
             <div>
               <div
                 className="container py-4"
