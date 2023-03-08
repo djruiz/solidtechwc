@@ -238,7 +238,7 @@ export default () => {
                   top: -1,
                 }}
               >
-                Practice Times: Tuesdays &amp; Fridays @ 5-7pm
+                Practice Times: Tuesdays 5-7pm &amp; Sundays @ 1-3pm
               </p>
             }
             color="#fff"
