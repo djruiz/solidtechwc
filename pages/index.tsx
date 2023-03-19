@@ -54,7 +54,7 @@ const Header = (props: HeaderProps) => {
         {props.children}
       </span>
       <div
-        style={{ width: "100%", height: "3px", backgroundColor: props.color }}
+        style={{ }}
       ></div>
       {props.pre}
     </div>
