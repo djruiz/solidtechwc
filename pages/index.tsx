@@ -143,7 +143,6 @@ export default () => {
                   Wrestling Club
                 </h1>
                 <Image width={40} height={30} src={Lightning} />
-                <Header className="text-end">Services</Header>
               </div>
             </Header>
           </div>

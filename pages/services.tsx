@@ -18,13 +18,13 @@ export default () => {
 
         <div className="service" id="drop-in">
             <Link href="https://buy.stripe.com/28o3e4b3UdSK09O5kq">
-                <button className="mt-4 position-relative btn btn-primary btn-lg w-100 shadow-med exo">Virginia Tournament</button>
+                <button className="mt-4 position-relative btn btn-primary btn-lg w-100 shadow-med exo">Virginia Beach</button>
             </Link>
         </div>
 
         <div className="service" id="drop-in">
             <Link href="https://buy.stripe.com/7sIg0Q8VMbKCe0EcMR">
-                <button className="mt-4 position-relative btn btn-primary btn-lg w-100 shadow-med exo">Virginia Tournament with transportation and Airbnb</button>
+                <button className="mt-4 position-relative btn btn-primary btn-lg w-100 shadow-med exo">Virginia Beach with transportation and Airbnb</button>
             </Link>
         </div>
     </div>   
