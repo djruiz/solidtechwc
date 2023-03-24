@@ -143,6 +143,7 @@ export default () => {
                   Wrestling Club
                 </h1>
                 <Image width={40} height={30} src={Lightning} />
+                <Header className="text-end">Services</Header>
               </div>
             </Header>
           </div>
@@ -250,7 +251,7 @@ export default () => {
               style={{ fontSize: 20, position: "relative", top: -1 }}
               className="m-0 ml-4 londrina"
             >
-              Stay. <span className="text-primary">Solid.</span>
+              <Link href="/services">Services</Link>
             </h2>
           </Header>
 
